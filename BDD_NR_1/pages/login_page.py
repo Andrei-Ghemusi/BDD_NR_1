@@ -1,11 +1,14 @@
+from selenium.webdriver.common.by import By
+
+from steps.base_page import Base_page
 from steps.browser import Browser
 import unittest
 
-class Login_page(Browser, unittest):
-    USERNAME = ()
-    PASSWORD = ()
-    LOGIN_BUTTON = ()
-    ERROR_MESSAGE_LOGIN = ()
+class Login_page(Base_page):
+    USERNAME = (By.ID, 'username')
+    PASSWORD = (By.ID, 'password')
+    LOGIN_BUTTON = (By.CLASS_NAME, 'radius')
+    ERROR_MESSAGE_LOGIN = (By.XPATH, '//*[@id="flash"]')
 
     def check_current_url(self):
         expected_url = 'https://the-internet.herokuapp.com/login'

@@ -22,11 +22,11 @@ def step_impl(context):
 
 @when("Home Page: I click on Form Authentication")
 def step_impl(context):
-    context.home_page_object.click_Form_Authentication()
+    context.home_page_object.click_on_Form_Authentication()
 
 @then("Login Page: I am on the Form Authentication")
 def step_impl(context):
-    context.login_page_object.check_curent_url()
+    context.login_page_object.check_current_url()
 
 
 

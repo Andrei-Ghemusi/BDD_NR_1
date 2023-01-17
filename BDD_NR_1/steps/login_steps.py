@@ -19,5 +19,5 @@ def step_impl(context):
 
 @then('Login Page: I cannot login into the application and I receive error message "{error_message}"')
 def step_impl(context, error_message):
-    context.login_page_object.check_login_error_message()
+    context.login_page_object.check_login_error_message(error_message)
 

@@ -23,7 +23,7 @@ Feature: check that the functionality of certain elements on the-internet.heroku
 
   Scenario: From the login page, check that you can login after providing incorrect username and incorrect password
     Given Login Page: I am on the login page
-    When Login Page: I insert username "incorrect_username" and password "incorrect password"
+    When Login Page: I insert the username "incorrect_username" and password "incorrect password"
     When Login Page: I click the login button
     Then Login Page: I cannot login into the application and I receive error message " Your username is invalid!"
 

@@ -1,10 +1,12 @@
+from selenium.webdriver.common.by import By
+
 from steps.browser import Browser
 
 
 class Home_page(Browser):
-    BASIC_AUTH = ()
-    CHECKBOXES = ()
-    FORM_AUTHENTICATION = ()
+    BASIC_AUTH = (By.LINK_TEXT, 'Basic Auth')
+    CHECKBOXES = (By.LINK_TEXT, 'Checkboxes')
+    FORM_AUTHENTICATION = (By.LINK_TEXT, 'Form Authentication')
 
     def navigate_to_home_page(self):
         self.chrome.get('https://the-internet.herokuapp.com/')
