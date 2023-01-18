@@ -28,4 +28,4 @@ class Login_page(Base_page):
         self.chrome.find_element(*self.LOGIN_BUTTON).click()
 
     def check_login_error_message(self, expected_error_message):
-        self.check_error_message(*self.ERROR_MESSAGE_LOGIN,expected_error_message)
+        self.check_error_message(*self.ERROR_MESSAGE_LOGIN, expected_error_message)
