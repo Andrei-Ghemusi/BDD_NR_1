@@ -9,6 +9,14 @@ def steps_impl(context, username, password):
     context.login_page_object.insert_username(username)
     context.login_page_object.insert_password(password)
 
+@when('Login Page: I only insert the username "{username}"')
+def steps_impl(context, username):
+    context.login_page_object.insert_username(username)
+
+@when('Login Page: I only insert the password "{password}"')
+def steps_impl(context, password):
+    context.login_page_object.insert_password(password)
+
 @when("Login Page: I click the login button")
 def step_impl(context):
     context.login_page_object.click_on_login()

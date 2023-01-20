@@ -36,12 +36,29 @@ Feature: check that the functionality of certain elements on the-internet.heroku
       | incorrect_username | incorrect_password   | Your username is invalid!   |
       | incorrect_username | SuperSecretPassword! | Your username is invalid!   |
       | tomsmith           | incorrect_password   | Your password is invalid!   |
-      |                    | incorrect_password   | Your username is invalid!   |
-      |                    | SuperSecretPassword! | Your username is invalid!   |
-      | incorrect_username |                      | Your username is invalid!   |
-      | tomsmith           |                      | Your password is invalid!   |
 
-  @T6 @Secure_Page_Logout
+  @T6 @Login_Failed @login_page @missing_credentials
+  Scenario: From the login page, check that you cannot login after inserting only the username
+    Given Login Page: I am on the login page
+    When Login Page: I only insert the username "<username>"
+    When Login Page: I click the login button
+    Then Login Page: I cannot login into the application and I receive error message "Your username is invalid!"
+
+  @T7 @Login_Failed @login_page @missing_credentials
+  Scenario: From the login page, check that you cannot login after inserting only the password
+    Given Login Page: I am on the login page
+    When Login Page: I only insert the username "<password>"
+    When Login Page: I click the login button
+    Then Login Page: I cannot login into the application and I receive error message "Your username is invalid!"
+
+  @T8 @Login_Failed @login_page @missing_credentials
+  Scenario: From the login page, check that you cannot login after only clicking the login button
+    Given Login Page: I am on the login page
+    When Login Page: I click the login button
+    Then Login Page: I cannot login into the application and I receive error message "Your username is invalid!"
+
+
+  @T9 @Secure_Page_Logout
   Scenario: From the secure page, check that you can log out
     Given Secure Page: I am logged in on the secure page with username "tomsmith" and password "SuperSecretPassword!"
     When Secure Page: I click on logout
