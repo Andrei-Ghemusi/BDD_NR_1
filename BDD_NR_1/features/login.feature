@@ -1,4 +1,4 @@
-Feature: check that the functionality of certain elements on the-internet.herokuapp page
+Feature: check the functionality of certain elements on the-internet.herokuapp page
 
   Background:
     Given Home Page: I am on the-internet.herokuapp page

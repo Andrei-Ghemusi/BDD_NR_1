@@ -1,8 +1,6 @@
 from selenium.webdriver.common.by import By
 
 from steps.base_page import Base_page
-from steps.browser import Browser
-import unittest
 
 class Login_page(Base_page):
     USERNAME = (By.ID, 'username')
