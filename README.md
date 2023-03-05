@@ -11,3 +11,7 @@ Structure of the project:
 - behave.ini file
 - environment file
 - 2 behave reports which can be opened in browser
+
+Using the command "behave -f html -o behave -report.html" in the terminal will run the entire project. *
+
+*IT IS ESSENTIAL to have the behave.ini file alongside the code written in it, otherwise the command to run the whole project will not work.
