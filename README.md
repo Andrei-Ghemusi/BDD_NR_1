@@ -4,6 +4,11 @@ This is my first BDD project.
 
 Site tested: https://the-internet.herokuapp.com/
 
+Libraries and packages used:
+- selenium
+- behave
+- webdriver_manager
+
 Structure of the project:
 - package called "features" in which there is the login.feature file which contains the said feature
 - package called "pages" which contains the: basic_auth_page, checkboxes_page, home_page, login_page, secure_page; files
@@ -12,6 +17,6 @@ Structure of the project:
 - environment file
 - 2 behave reports which can be opened in browser
 
-Using the command "behave -f html -o behave -report.html" in the terminal will run the entire project. *
-
+How to run the project:
+- using the command "behave -f html -o behave -report.html" in the terminal will run the entire project. *
 *IT IS ESSENTIAL to have the behave.ini file alongside the code written in it, otherwise the command to run the whole project will not work.
