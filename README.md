@@ -1,4 +1,4 @@
-# BDD_NR_1
+# BDD internet.herokuapp site
 
 This is my first BDD project.
 
